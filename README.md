@@ -8,9 +8,12 @@
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+This is made for iphone Developer who want intregate all social sharing like FB,Twitter,Linkedin,Google+,Instragram.
 
 ## Requirements
 
+You first install pod
+## pod "SLSocialShare"
 ## Installation
 
 SLSocialShare is available through [CocoaPods](http://cocoapods.org). To install
@@ -23,6 +26,7 @@ pod "SLSocialShare"
 ## Author
 
 Bhumesh, bhumeshpurohit@ymail.com
+Also Thanks To Aadil Keshwani for Help to Create This.
 
 ## License
 

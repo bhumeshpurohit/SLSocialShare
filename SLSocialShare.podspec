@@ -9,7 +9,11 @@
 Pod::Spec.new do |s|
   s.name             = "SLSocialShare"
   s.version          = "0.1.0"
-  s.summary          = "A short description of SLSocialShare."
+s.summary          = "This is a guide to help developers get up to speed with Social Login and Sharing. It is geared primarily towards anyone who is new to Mac or iOS development, or has not worked extensively with 3rd-party libraries before.
+
+These step-by-step instructions are written for Xcode 5, using the iOS 7 SDK. If you are using a previous version of Xcode, you may want to update before starting.
+
+ "
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,13 +21,14 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+This is a guide to help developers get up to speed with Social Login and Sharing. It is geared primarily towards anyone who is new to Mac or iOS development, or has not worked extensively with 3rd-party libraries before.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SLSocialShare"
+  s.homepage         = "https://github.com/bhumeshpurohit/SLSocialShare"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Bhumesh" => "bhumeshpurohit@ymail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SLSocialShare.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/bhumeshpurohit/SLSocialShare.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'

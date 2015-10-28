@@ -1,0 +1,25 @@
+{
+  "name": "SLSocialShare",
+  "version": "0.1.0",
+  "summary": "A short description of SLSocialShare.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SLSocialShare",
+  "license": "MIT",
+  "authors": {
+    "Bhumesh": "bhumeshpurohit@ymail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SLSocialShare.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SLSocialShare": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

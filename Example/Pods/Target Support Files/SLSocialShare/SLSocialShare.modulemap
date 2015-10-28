@@ -1,0 +1,6 @@
+framework module SLSocialShare {
+  umbrella header "SLSocialShare-umbrella.h"
+
+  export *
+  module * { export * }
+}

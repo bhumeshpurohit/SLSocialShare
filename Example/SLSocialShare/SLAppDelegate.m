@@ -10,11 +10,12 @@
 
 @implementation SLAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    return YES;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        // Override point for customization after application launch.
+        return [[FBSDKApplicationDelegate sharedInstance] application:application
+                     didFinishLaunchingWithOptions:launchOptions];
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -33,14 +34,36 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+        [FBSDKAppEvents activateApp];
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+        if (self.social.socialType==socialTypeFaceBook)
+            {
+                    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                                      openURL:url
+                                                                            sourceApplication:sourceApplication
+                                                                                   annotation:annotation];
+                }
+        else if (self.social.socialType==socialTypeGoogle){
+                return [GPPURLHandler handleURL:url
+                                          sourceApplication:sourceApplication
+                                                 annotation:annotation];
+            }
+        else if (self.social.socialType==socialTypeLinkedInn) {
+                return [LISDKCallbackHandler application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+            }
+        else{
+                return true;
+            }
+    
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-
+#import "SLAppDelegate.h"
 @interface SLViewController : UIViewController
-
+@property (strong,nonatomic) AppDelegate *app;
 @end

@@ -3,6 +3,14 @@ use_frameworks!
 
 target 'SLSocialShare_Example', :exclusive => true do
   pod "SLSocialShare", :path => "../"
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'google-plus-ios-sdk'
+  pod 'InstagramKit'
+  pod 'MBProgressHUD'
+  pod ‘FHSTwitterEngine'
+
 end
 
 target 'SLSocialShare_Tests', :exclusive => true do
